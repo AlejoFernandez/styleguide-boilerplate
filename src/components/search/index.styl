@@ -1,0 +1,103 @@
+.keyboard-button
+  border: 1px solid rgba(0, 0, 0, 0.20);
+  padding: 0px 5px;
+  border-radius: 3px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.18);
+  font-size: 0.9em;
+  margin: 0 2px;
+
+.advanced-search-control
+  border-radius: 3px;
+  height: 35px;
+  line-height: 35px;
+  position: relative;
+  overflow: hidden;
+  background: lighten(#f0f1f1, 20%);
+
+  .search-area
+    display: inline-block;
+    height: 35px;
+    padding-left: 10px;
+    border-radius: 3px 0 0 3px;
+    border-right: 0;
+    position: relative;
+    top: -1px;
+
+    input
+      height: 35px;
+
+    i
+      position: relative;
+      opacity: 0.5;
+      top: 3px;
+      margin-right: 2px;
+
+  .user-input
+    width: 470px;
+
+  input,
+  select,
+  button
+    -webkit-appearance: none;
+    border: 0;
+    padding: 0;
+    background: none;
+    outline: none;
+
+  .custom-select
+    position: relative;
+    cursor: pointer;
+    height: 35px;
+
+    span
+      display: inline-block;
+      overflow: hidden;
+
+    [data-select-value]
+      max-width: 110px;
+      margin-left: 4px;
+
+    i
+      position: absolute;
+      right: 8px;
+      top: 2px;
+      font-size: 12px;
+      opacity: 0.7;
+
+  .controls-search
+    display: inline-block;
+    vertical-align: top;
+    background: #E6E6E6;
+    height: 35px;
+    border-radius: 0 3px 3px 0;
+
+    [data-select-value]
+      color: #0a86b1;
+
+    [type="reset"]
+      font-weight: bold;
+
+      i
+        font-size: 9px;
+        opacity: 0.7;
+        margin-left: 5px;
+
+    .custom-select
+      width: 210px;
+
+    .custom-select,
+    button
+      padding: 0 15px;
+      cursor: pointer;
+
+      &:hover
+        background: rgba(black, 0.05);
+
+      & + .custom-select,
+      & + button
+        border-left: 1px solid rgba(black, 0.1);
+        margin-left: -4px;
+
+
+
+
