@@ -1,6 +1,8 @@
-var path              = require('path');
-var webpack           = require('webpack');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+'use strict';  // eslint-disable-line strict
+
+const path              = require('path');
+const webpack           = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devtool: 'eval-source-map',
@@ -28,7 +30,7 @@ module.exports = {
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
       title:    'Auth0 Components',
-      template: './templates/index.html',
+      template: './templates/index.ejs',
       inject:   'body'
     })
   ]

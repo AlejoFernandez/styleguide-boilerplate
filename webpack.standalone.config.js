@@ -1,6 +1,8 @@
-var path    = require('path');
-var webpack = require('webpack');
-var pkg     = require('./package.json');
+'use strict';  // eslint-disable-line strict
+
+const path    = require('path');
+const webpack = require('webpack');
+const pkg     = require('./package.json');
 
 module.exports = {
   entry: [
