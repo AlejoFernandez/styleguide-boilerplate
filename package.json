@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.config.js --hot --inline --port 3000",
     "build": "webpack --config webpack.standalone.config.js && webpack --config webpack.playground.config.js",
-    "lint-styl": "stylint src/components"
+    "lint-styl": "stylint src/components",
+    "lint-js": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,8 @@
     "babel-preset-react": "^6.0.15",
     "babel-preset-stage-0": "^6.0.15",
     "css-loader": "^0.23.0",
+    "eslint": "^2.4.0",
+    "eslint-config-auth0": "^1.0.0",
     "eslint-plugin-react": "^4.2.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.10.0",
