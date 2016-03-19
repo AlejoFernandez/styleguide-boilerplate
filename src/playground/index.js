@@ -1,20 +1,18 @@
-import React, {Component} from 'react';
-import ReactDOM           from 'react-dom';
-import Playground         from 'component-playground';
-import Search             from '../components/search';
-import searchExample      from 'raw!./examples/search.example';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Playground from 'component-playground';
+import Search from '../components/search';
+import searchExample from 'raw!./examples/search.example';
+import Header from '../components/header';
+import headerExample from 'raw!./examples/header.example';
 
-export default class Index extends Component {
-  render() {
-    return (
-      <div className='component-documentation'>
-        <Playground
-          codeText={searchExample}
-          scope={{React: React, Search: Search}}
-          />
-      </div>
-    );
-  }
+export default function Index() {
+  return (
+    <div className="component-documentation">
+      <Playground codeText={searchExample} scope={{ React, Search }} />
+      <Playground codeText={headerExample} scope={{ React, Header }} />
+    </div>
+  );
 }
 
-ReactDOM.render(<Index/>, document.getElementById('content'));
+ReactDOM.render(<Index />, document.getElementById('content'));
