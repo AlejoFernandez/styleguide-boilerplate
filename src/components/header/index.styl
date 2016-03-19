@@ -1,0 +1,364 @@
+.header
+  background transparent
+  font-size 14px
+  padding 20px 0 20px 0
+  position static
+  z-index 1000
+
+  &.header--fixed
+    background rgba(255, 255, 255, .8)
+    position fixed
+
+  &.header--basic .no-basic
+    display none
+
+  @media screen and (max-width 990px)
+    padding 10px 0
+    position static
+    text-align left
+
+.header a
+  color #333
+
+.header li *
+  -webkit-backface-visibility hidden
+
+.header :global(.navbar-header)
+  float none
+  position relative
+
+  @media (min-width 992px)
+    float left
+    margin-left 0
+    margin-right 0
+
+.header nav
+  background none
+  border 0
+  margin 0
+
+.header nav :global(li.active) a
+  background none
+  color #000
+
+.header nav ul
+.header nav li
+  margin 0
+
+.header nav :global(.navbar-brand)
+  color #000
+  display inline-block
+  float left
+  font-size 24px
+  font-weight 600
+  margin 0
+  margin-right 20px
+  padding 0 15px 0 18px
+  width 120px
+
+  @media (min-width 992px)
+    padding 0 15px 0 0
+
+.header nav :global(.navbar-brand) a
+  background url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjQ2MnB4IiBoZWlnaHQ9IjE2OHB4IiB2aWV3Qm94PSIwIDAgNDYyIDE2OCIgdmVyc2lvbj0iMS4xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4bWxuczpza2V0Y2g9Imh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaC9ucyI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDMuMC4zICg3ODkxKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5VbnRpdGxlZDwvdGl0bGU+CiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4KICAgIDxkZWZzPjwvZGVmcz4KICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIHNrZXRjaDp0eXBlPSJNU1BhZ2UiPgogICAgICAgIDxnIGlkPSJsb2dvLWJsdWUtaG9yaXpvbnRhbCIgc2tldGNoOnR5cGU9Ik1TTGF5ZXJHcm91cCI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cCIgc2tldGNoOnR5cGU9Ik1TU2hhcGVHcm91cCI+CiAgICAgICAgICAgICAgICA8ZyBpZD0iQ2xpcHBlZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTg4LjAwMDAwMCwgNDQuMDAwMDAwKSIgZmlsbD0iIzE2MjE0RCI+CiAgICAgICAgICAgICAgICAgICAgPHBhdGggZD0iTTI0Ni41MTcsMC4xMSBDMjM4LjQzOSwwLjExIDIzMS42MDcsMy45MTYgMjI2Ljc1OSwxMS4xMTUgQzIyMS45NCwxOC4yNzEgMjE5LjM5MywyOC4yNiAyMTkuMzkzLDQwIEMyMTkuMzkzLDUxLjc0IDIyMS45NCw2MS43MjkgMjI2Ljc1OSw2OC44ODQgQzIzMS42MDcsNzYuMDg0IDIzOC40MzksNzkuODg5IDI0Ni41MTcsNzkuODg5IEMyNTQuNTk1LDc5Ljg4OSAyNjEuNDI3LDc2LjA4NCAyNjYuMjc1LDY4Ljg4NCBDMjcxLjA5Myw2MS43MjkgMjczLjY0LDUxLjc0IDI3My42NCw0MCBDMjczLjY0LDI4LjI2IDI3MS4wOTMsMTguMjcxIDI2Ni4yNzUsMTEuMTE1IEMyNjEuNDI3LDMuOTE2IDI1NC41OTUsMC4xMSAyNDYuNTE3LDAuMTEgTDI0Ni41MTcsMC4xMSBaIE0yNDYuNTE3LDcwLjAwNSBDMjQyLjY1NSw3MC4wMDUgMjM5LjYwNCw2Ny44MiAyMzcuMTg3LDYzLjMyNCBDMjM0LjI2OCw1Ny44OTMgMjMyLjY2LDQ5LjYxIDIzMi42Niw0MCBDMjMyLjY2LDMwLjM5IDIzNC4yNjgsMjIuMTA2IDIzNy4xODcsMTYuNjc2IEMyMzkuNjA0LDEyLjE4IDI0Mi42NTUsOS45OTQgMjQ2LjUxNyw5Ljk5NCBDMjUwLjM3OCw5Ljk5NCAyNTMuNDMsMTIuMTggMjU1Ljg0NywxNi42NzYgQzI1OC43NjYsMjIuMTA2IDI2MC4zNzMsMzAuMzg5IDI2MC4zNzMsNDAgQzI2MC4zNzMsNDkuNjExIDI1OC43NjYsNTcuODk1IDI1NS44NDcsNjMuMzI0IEMyNTMuNDMsNjcuODIgMjUwLjM3OCw3MC4wMDUgMjQ2LjUxNyw3MC4wMDUgTDI0Ni41MTcsNzAuMDA1IFogTTcxLjQ1LDI5LjE3MiBMNzEuNDUsNjMuNDg0IEM3MS40NSw3Mi41MyA3OC44MSw3OS44ODkgODcuODU2LDc5Ljg4OSBDOTUuNzQ2LDc5Ljg4OSAxMDEuNzA3LDc1Ljk3NSAxMDMuOTAyLDc0LjI5MSBDMTA0LjAyNCw3NC4xOTcgMTA0LjE4NCw3NC4xNjkgMTA0LjMzMSw3NC4yMTYgQzEwNC40NzgsNzQuMjYzIDEwNC41OTIsNzQuMzc5IDEwNC42MzcsNzQuNTI3IEwxMDUuOTYxLDc4Ljg2IEwxMTUuNzM3LDc4Ljg2IEwxMTUuNzM3LDI5LjE3MiBMMTAzLjE3NSwyOS4xNzIgTDEwMy4xNzUsNjYuMzI2IEMxMDMuMTc1LDY2LjUwMSAxMDMuMDc2LDY2LjY2MiAxMDIuOTIxLDY2Ljc0MyBDMTAwLjU1OSw2Ny45NjEgOTUuODk5LDcwLjAwNiA5MS4yMzEsNzAuMDA2IEM4Ny4yNTIsNzAuMDA2IDg0LjAxMiw2Ni43NjggODQuMDEyLDYyLjc4NyBMODQuMDEyLDI5LjE3MiBMNzEuNDUsMjkuMTcyIEw3MS40NSwyOS4xNzIgWiBNMTk3LjIzNyw3OC44NTkgTDIwOS44LDc4Ljg1OSBMMjA5LjgsNDQuNTQ3IEMyMDkuOCwzNS41MDEgMjAyLjQ0LDI4LjE0MSAxOTMuMzk0LDI4LjE0MSBDMTg2LjczNSwyOC4xNDEgMTgxLjM5MywzMS4wMDQgMTc4LjgwMiwzMi43MSBDMTc4LjY1NywzMi44MDUgMTc4LjQ3MywzMi44MTMgMTc4LjMyMiwzMi43MzEgQzE3OC4xNzEsMzIuNjQ5IDE3OC4wNzUsMzIuNDkxIDE3OC4wNzUsMzIuMzE4IEwxNzguMDc1LDEuMTQxIEwxNjUuNTEzLDEuMTQxIEwxNjUuNTEzLDc4Ljg1OSBMMTc4LjA3NSw3OC44NTkgTDE3OC4wNzUsNDEuNzA0IEMxNzguMDc1LDQxLjUyOSAxNzguMTc0LDQxLjM2OCAxNzguMzMsNDEuMjg4IEMxODAuNjkxLDQwLjA2OSAxODUuMzUyLDM4LjAyNSAxOTAuMDE5LDM4LjAyNSBDMTkxLjk0NywzOC4wMjUgMTkzLjc2LDM4Ljc3NiAxOTUuMTIzLDQwLjEzOSBDMTk2LjQ4Niw0MS41MDIgMTk3LjIzNiw0My4zMTYgMTk3LjIzNiw0NS4yNDMgTDE5Ny4yMzYsNzguODU5IEwxOTcuMjM3LDc4Ljg1OSBaIE0xMjQuNzkyLDM5LjA1NSBMMTMyLjQzOCwzOS4wNTUgQzEzMi42OTcsMzkuMDU1IDEzMi45MDcsMzkuMjY1IDEzMi45MDcsMzkuNTI0IEwxMzIuOTA3LDY2Ljg1OCBDMTMyLjkwNyw3NC4wNDMgMTM4Ljc1Myw3OS44ODggMTQ1LjkzOCw3OS44ODggQzE0OC41NDMsNzkuODg4IDE1MS4xMTMsNzkuNTEyIDE1My41ODUsNzguNzcgTDE1My41ODUsNjkuNzk2IEMxNTIuMTQzLDY5LjkyMyAxNTAuNDg1LDcwLjAwNSAxNDkuMzEzLDcwLjAwNSBDMTQ3LjE5Myw3MC4wMDUgMTQ1LjQ2OSw2OC4yOCAxNDUuNDY5LDY2LjE2MSBMMTQ1LjQ2OSwzOS41MjMgQzE0NS40NjksMzkuMjY0IDE0NS42NzksMzkuMDU0IDE0NS45MzgsMzkuMDU0IEwxNTMuNTg1LDM5LjA1NCBMMTUzLjU4NSwyOS4xNzEgTDE0NS45MzgsMjkuMTcxIEMxNDUuNjc5LDI5LjE3MSAxNDUuNDY5LDI4Ljk2MSAxNDUuNDY5LDI4LjcwMiBMMTQ1LjQ2OSwxMi4yOTUgTDEzMi45MDcsMTIuMjk1IEwxMzIuOTA3LDI4LjcwMiBDMTMyLjkwNywyOC45NjEgMTMyLjY5NywyOS4xNzEgMTMyLjQzOCwyOS4xNzEgTDEyNC43OTIsMjkuMTcxIEwxMjQuNzkyLDM5LjA1NSBMMTI0Ljc5MiwzOS4wNTUgWiBNNTEuMzYxLDc4Ljg1OSBMNjQuNDI5LDc4Ljg1OSBMNDQuNTU1LDkuNTUgQzQyLjk2MiwzLjk5MiAzNy44MTEsMC4xMSAzMi4wMjksMC4xMSBDMjYuMjQ3LDAuMTEgMjEuMDk2LDMuOTkyIDE5LjUwMiw5LjU1IEwtMC4zNzIsNzguODU5IEwxMi42OTcsNzguODU5IEwxOC40NDksNTguNzk4IEMxOC41MDcsNTguNTk3IDE4LjY5MSw1OC40NTkgMTguOSw1OC40NTkgTDQ1LjE1OCw1OC40NTkgQzQ1LjM2Nyw1OC40NTkgNDUuNTUyLDU4LjU5NyA0NS42MDksNTguNzk4IEw1MS4zNjEsNzguODU5IEw1MS4zNjEsNzguODU5IFogTTQyLjA1Niw0OC41NzYgTDIyLjAwNCw0OC41NzYgQzIxLjg1Nyw0OC41NzYgMjEuNzE4LDQ4LjUwNyAyMS42MjksNDguMzg4IEMyMS41NDEsNDguMjcyIDIxLjUxMyw0OC4xMTkgMjEuNTUzLDQ3Ljk3OCBMMzEuNTc5LDEzLjAxMiBDMzEuNjM3LDEyLjgxMSAzMS44MjEsMTIuNjczIDMyLjAzLDEyLjY3MyBDMzIuMjM5LDEyLjY3MyAzMi40MjMsMTIuODExIDMyLjQ4LDEzLjAxMiBMNDIuNTA3LDQ3Ljk3OCBDNDIuNTQ3LDQ4LjEyIDQyLjUxOSw0OC4yNzIgNDIuNDMsNDguMzg4IEM0Mi4zNDIsNDguNTA3IDQyLjIwMyw0OC41NzYgNDIuMDU2LDQ4LjU3NiBMNDIuMDU2LDQ4LjU3NiBaIiBpZD0iU2hhcGUiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgICAgIDxnIGlkPSJDbGlwcGVkIiBmaWxsPSIjRUI1NDI0Ij4KICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTE5LjU1NSwxMzUuODYxIEwxMDIuNzA1LDgzLjk5NyBMMTQ2LjgxMyw1MS45NTIgTDkyLjI5MSw1MS45NTIgTDc1LjQ0LDAuMDkgTDc1LjQzNSwwLjA3NiBMMTI5Ljk2NSwwLjA3NiBMMTQ2LjgyLDUxLjk0NyBMMTQ2LjgyMSw1MS45NDYgTDE0Ni44MzUsNTEuOTM4IEMxNTYuNjIzLDgyLjAzIDE0Ni41NDIsMTE2LjI1NiAxMTkuNTU1LDEzNS44NjEgTDExOS41NTUsMTM1Ljg2MSBaIE0zMS4zMjEsMTM1Ljg2MSBMMzEuMzA3LDEzNS44NzEgTDc1LjQyNiwxNjcuOTI0IEwxMTkuNTU1LDEzNS44NjIgTDc1LjQ0LDEwMy44MDggTDMxLjMyMSwxMzUuODYxIEwzMS4zMjEsMTM1Ljg2MSBaIE00LjA1Miw1MS45MzkgTDQuMDUyLDUxLjkzOSBDLTYuMjUyLDgzLjY2IDUuNzA5LDExNy4yNzIgMzEuMzEyLDEzNS44NjcgTDMxLjMxNiwxMzUuODUxIEw0OC4xNjgsODMuOTkgTDQuMDcsNTEuOTUxIEw1OC41NzksNTEuOTUxIEw3NS40MzEsMC4wODkgTDc1LjQzNSwwLjA3NSBMMjAuOTAyLDAuMDc1IEw0LjA1Miw1MS45MzkgTDQuMDUyLDUxLjkzOSBaIiBpZD0iU2hhcGUiPjwvcGF0aD4KICAgICAgICAgICAgICAgIDwvZz4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+") center left no-repeat
+  background-size 70%
+  display block
+  height 40px
+  margin-top 5px
+  width 130px
+
+.header nav :global(.navbar-brand) img
+  display none
+  height 36px
+  margin-right 10px
+  position relative
+  top 2px
+
+.header nav :global(.navbar-brand) span
+  display none
+
+.header :global(.navbar-default .navbar-collapse)
+  border-color transparent
+  padding 0
+
+.header :global(.navbar-default .navbar-collapse.collapse)
+  display none !important
+
+.header :global(.navbar-default .navbar-collapse.collapse.in)
+  display block !important
+
+@media (min-width 992px)
+  .header :global(.navbar-default .navbar-collapse.collapse)
+    display block !important
+
+.header :global(.navbar-default .navbar-nav > .active) > a
+.header :global(.navbar-default .navbar-default .navbar-nav > .active) > a:hover
+.header :global(.navbar-default .navbar-default .navbar-nav > .active) > a:focus
+  background transparent
+
+.header :global(.navbar-default .navbar-nav > .open) > a
+  background none
+
+.header :global(.navbar-default .navbar-nav)
+  float none !important
+
+  &:global(.navbar-right)
+    @media (min-width 992px)
+      float right !important
+
+  &:global(.navbar-left)
+    @media (min-width 992px)
+      float left !important
+
+.header :global(.navbar-default .navbar-nav) > li
+  float none
+
+  @media (min-width 992px)
+    float left
+
+.header :global(.navbar-toggle)
+  border 0
+  display block
+
+  &:hover
+    background none
+
+  &:hover :global(.icon-bar)
+    background #000
+
+  @media (min-width 992px)
+    display none
+
+.header .btn-dro
+  background none
+  color #777
+  cursor pointer
+  display inline-block
+  line-height 20px
+  padding 15px
+
+  &:hover
+    color #666
+
+.header .btn-dro i
+  display inline-block
+  font-size 10px
+  margin-left 5px
+  position relative
+  top 1px
+  width 6px
+
+.header :global(.dropdown .dropdown-menu > .active) > a
+.header :global(.dropdown .dropdown-menu > .active) > a:hover
+.header :global(.dropdown .dropdown-menu > .active) > a:focus
+  background-color none
+
+.header :global(.dropdown .dropdown-menu)
+  background #fff
+  border 0
+  border-bottom 1px solid #f1f1f1
+  border-radius 3px
+  display block
+  left 0
+  min-width 130px
+  transform none
+  transition transform .1s cubic-bezier(.3, 0, 0, 1.3)
+
+  @media (min-width 992px)
+    opacity 0
+    pointer-events none
+    transform scale(.8) translateY(-10%)
+
+.header :global(.dropdown .dropdown-menu) li > a
+  line-height 20px
+  padding 10px 15px
+
+  @media (min-width 992px)
+    padding 5px 20px
+
+.header :global(.dropdown .dropdown-menu) li > a:hover
+  background none
+
+  @media (min-width 992px)
+    background #f1f1f1
+
+.header :global(.dropdown .dropdown-menu) ::after
+  border-bottom 6px solid #fff
+  border-left 6px solid transparent
+  border-right 6px solid transparent
+  content ''
+  display inline-block
+  left 26px
+  position absolute
+  top -6px
+
+.header :global(.dropdown .dropdown-menu .divider)
+  background-color rgba(0, 0, 0, .1)
+
+  @media (min-width 992px)
+    margin 8px 0
+
+.header :global(.dropdown.open .dropdown-menu)
+  opacity 1
+  pointer-events auto
+  transform none
+
+.header a.login
+  border 1px solid #f1f1f1
+  border-radius 100px
+  color #666
+  display inline-block
+  font-size 12px
+  font-weight 600
+  letter-spacing 1px
+  line-height 30px
+  margin-left 10px
+  margin-top 10px
+  padding 0
+  padding-left 15px
+  padding-right 14px
+  text-transform uppercase
+
+.header a.login:hover
+  background #f1f1f1
+
+@media (min-width 992px)
+  .header :global(.navbar > .container .navbar-brand)
+  .header :global(.navbar > .container-fluid .navbar-brand)
+    margin-left 0
+
+a.hiring
+  background #44c7f4
+  border-radius 3px
+  color #fff
+  display block
+  font-size 11px
+  font-weight 600
+  left 120px
+  padding 2px 6px
+  position absolute
+  text-transform uppercase
+  top 13px
+
+  @media (min-width 992px)
+    left -104px
+
+  &::after
+    border-bottom 5px solid transparent
+    border-left 0
+    border-right 5px solid #44c7f4
+    border-top 5px solid transparent
+    content ""
+    height 0
+    left -4px
+    position absolute
+    top 6px
+    width 0
+
+    @media (min-width 992px)
+      border-left 5px solid #44c7f4
+      border-right 0
+      left auto
+      right -4px
+
+/*==========  Header with dark background behind  ==========*/
+@media screen and (min-width 990px)
+  .header.header--dark
+    border-bottom 1px solid rgba(255, 255, 255, .1)
+    left 0
+    position absolute
+    right 0
+    top 0
+
+  .header.header--dark :global(h1.navbar-brand) a
+    background-image url("//cdn.auth0.com/styleguide/1.0.0/img/logo-grey-horizontal.png")
+
+  .header.header--dark :global(.navbar-default .navbar-nav > .active) > a
+  .header.header--dark :global(.navbar-default .navbar-nav > .active) > a:hover
+  .header.header--dark :global(.navbar-default .navbar-nav > .active) > a:focus
+    color #fff
+
+  .header.header--dark :global(.dropdown) a
+    color #333
+
+  .header.header--dark :global(.navbar-default .navbar-nav) > li > a
+    color #d0d2d3
+
+    &:hover
+      background none
+      color #fff
+
+  .header.header--dark nav li .btn-dro
+    color #d0d2d3
+
+    &:hover
+      color #fff
+
+  .header.header--dark a.btn
+    border-color #fff
+
+    &:hover
+      border-color #fff
+      color #000
+
+  .header.header--fixed-top
+    background #fff
+    background rgba(255, 255, 255, .9)
+    left 0
+    position fixed !important
+    right 0
+    transform translate3d(0, 0, 0)
+    z-index 1030
+
+/*==========  Responsive  ==========*/
+@media screen and (max-width 990px)
+  .header :global(.navbar-left)
+    border-top 1px solid #f1f1f1
+
+  .header li
+    border-bottom 1px solid #f1f1f1
+    padding 8px 0
+
+  .header li:last-child
+    border-bottom 0
+
+  .header li a
+    display block
+
+  .header :global(li.dropdown)
+    display block
+    opacity 1
+    overflow hidden
+    padding 0
+
+  .header :global(li.dropdown) .btn-dro
+    display none
+
+  .header :global(li.dropdown .divider)
+    display none
+
+  .header :global(li.dropdown ul.dropdown-menu)
+    background #f8f8f8
+    border-left 4px solid #ccc
+    border-radius 0
+    box-shadow none
+    margin 0
+    margin 0
+    min-width 0
+    opacity 1
+    padding 0
+    pointer-events all
+    position static
+    transform none
+    transition none
+    width 100%
+
+  .header :global(li.dropdown ul.dropdown-menu) li:last-child
+    border-bottom 0
+
+  .header nav a.login
+    display block
+    font-size 14px
+    margin-bottom 20px
+    padding 10px
+    text-align center

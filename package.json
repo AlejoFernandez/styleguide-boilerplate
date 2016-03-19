@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.config.js --hot --inline --port 3000",
-    "build": "webpack --config webpack.standalone.config.js && webpack --config webpack.playground.config.js"
+    "build": "webpack --config webpack.standalone.config.js && webpack --config webpack.playground.config.js",
+    "lint-styl": "stylint src/components",
+    "lint-js": "eslint ."
   },
   "repository": {
     "type": "git",
@@ -28,12 +30,15 @@
     "babel-preset-react": "^6.0.15",
     "babel-preset-stage-0": "^6.0.15",
     "css-loader": "^0.23.0",
+    "eslint": "^2.4.0",
+    "eslint-config-auth0": "^1.0.0",
     "eslint-plugin-react": "^4.2.3",
     "extract-text-webpack-plugin": "^1.0.1",
     "html-webpack-plugin": "^2.10.0",
     "raw-loader": "^0.5.1",
     "react-hot-loader": "^1.3.0",
     "style-loader": "^0.13.0",
+    "stylint": "^1.3.6",
     "stylus-loader": "^1.4.2",
     "url-loader": "^0.5.7",
     "webpack": "^1.12.12",
