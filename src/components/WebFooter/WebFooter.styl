@@ -1,0 +1,200 @@
+$color-gray = #d0d2d3
+$bg-color-dark = #222228
+$color-text-white = white
+$color-text-contrast = $color-text-white
+$color-line-contrast = rgba(white, .20)
+
+clearfix()
+  &:after
+    clear both
+
+  &:after, &:before
+    content ""
+    display table
+
+grid(cols = 1, gutter = 0, childs = ".item", orientation= "right")
+  clearfix()
+  margin-right -(gutter)
+  width auto
+
+  {childs}
+    background-clip content-box
+    float left
+    padding-{orientation} gutter
+    width (100% / cols)
+
+.footer
+  clearfix()
+  background-color white
+  font-size 13px
+  padding-top 30px
+
+  @media (min-width 992px)
+    padding-top 40px
+
+.footer a
+  color darken($color-gray, 60%)
+
+  &:active
+    text-decoration underline
+
+  &:hover
+  &:focus
+    color darken($color-gray, 40%)
+
+.footer__logo
+  margin-bottom 15px
+  text-align center
+
+  @media (min-width 992px)
+    float left
+    padding-top 10px
+    text-align left
+    width 8%
+
+.footer__logo img
+  width 20px
+
+  @media (min-width 992px)
+    width 30px
+
+.footer__title
+  color darken($color-gray, 20%)
+  letter-spacing .05em
+  margin 0
+  padding 10px 0
+  text-transform uppercase
+
+.footer__grid
+  grid(1, 0, '.footer__column')
+  text-align left
+
+  @media (min-width 992px)
+    grid(7, 10px, '.footer__column')
+    float left
+    margin-bottom 25px
+    width 92%
+
+.footer__column
+  margin-bottom 10px
+
+  @media (min-width 992px)
+    margin-bottom 15px
+
+.footer__item
+  margin-bottom 4px
+
+.footer__item--label
+  font-size 12px
+  letter-spacing 1px
+  margin-bottom 0
+  opacity .5
+  padding-bottom 5px
+  text-transform uppercase
+
+.footer__item--text
+  opacity .7
+
+.footer__item a
+  border-bottom 1px solid lighten($color-gray, 60%)
+  display block
+  padding 10px 0
+
+  @media (min-width 992px)
+    border 0
+    line-height 1.8
+    padding 0
+
+  .footer__contact &
+    border 0
+
+.footer__contact
+  clearfix()
+  float left
+  padding-top 10px
+  position relative
+  width 100%
+
+  @media (min-width 992px)
+    border 0
+    float none
+    padding-top 0
+    position static
+    width auto
+
+.footer__contact > .footer__column
+  @media (max-width 992px)
+    float left
+    position static
+    width 50%
+
+.footer__column--no-heading
+  position absolute
+  right 0
+  text-align right
+  top 18px
+
+  @media (min-width 992px)
+    padding-top 7px
+    position static
+
+.footer__column--no-heading .footer__item
+  font-size 12px
+
+.footer__column--no-heading .footer__item a
+  padding 0
+  padding-bottom 5px
+
+  @media (min-width 992px)
+    padding 0
+
+.social
+  clearfix()
+  padding-top 10px
+  text-align left
+
+.social__item
+  height 20px
+  margin-bottom 8px
+
+  @media (min-width 992px)
+    float left
+    width 200px
+
+.footer-colophon
+  clear both
+  overflow hidden
+
+  @media (min-width: 568px)
+    grid(2, 0, '.footer__column')
+
+  @media (min-width 992px)
+    border-top 1px solid lighten($color-gray, 60%)
+
+.footer-colophon__list
+  margin-top 5px
+
+.footer-colophon__item
+  margin 5px 0
+  padding 0 5px
+
+  @media (min-width 992px)
+    margin-left 10px
+
+.footer--dark
+  background-color $bg-color-dark
+  border-top 0
+
+.footer--dark .footer__title
+  color $color-text-contrast
+
+.footer--dark .footer__item
+  color $color-text-contrast
+
+  a
+    border-color $color-line-contrast
+    color $color-text-contrast
+
+.footer--dark .footer-colophon
+  border-color $color-line-contrast
+  color $color-text-contrast
