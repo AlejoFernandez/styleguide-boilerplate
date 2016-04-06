@@ -3,6 +3,9 @@
 const path    = require('path');
 const webpack = require('webpack');
 const pkg     = require('./package.json');
+const poststylus = require('poststylus');
+
+const DEBUG = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   entry: [
@@ -23,7 +26,15 @@ module.exports = {
     },
     {
       test: /\.styl$/,
-      loader: 'style-loader!css-loader?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!stylus-loader'
+      loader: 'style-loader!' +
+        `css-loader?${JSON.stringify({
+          sourceMap: DEBUG,
+          modules: true,
+          localIdentName: DEBUG ? '[name]_[local]_[hash:base64:3]' : '[hash:base64:4]',
+          minimize: !DEBUG,
+          importLoaders: true
+        })}` +
+        '!stylus-loader'
     }]
   },
   plugins: [
@@ -33,5 +44,10 @@ module.exports = {
         warnings: false
       }
     })
-  ]
+  ],
+  stylus: {
+    use: [
+      poststylus(['autoprefixer'])
+    ]
+  }
 };
