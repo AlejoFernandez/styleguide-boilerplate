@@ -1,0 +1,170 @@
+:global(.ReactModal__Body--open)
+  overflow hidden
+
+.modal
+  -webkit-overflow-scrolling touch
+  background none
+  bottom 0
+  left 0
+  opacity 0
+  outline 0
+  overflow-x hidden
+  overflow-y auto
+  position fixed
+  right 0
+  top 0
+  transition .5s
+  z-index 1050
+
+.modal--in
+  opacity 1
+  pointer-events auto
+
+.modal__dialog
+  box-shadow 0 0 10px 0 rgba(0, 0, 0, .1)
+  margin 10px
+  max-width 640px
+  opacity 0
+  overflow hidden
+  position relative
+  transform translateY(80%) scale(.8)
+  transition .4s
+  transition-delay .2s
+  transition-timing-function cubic-bezier(.3, 0, 0, 1.3)
+  width auto
+
+  @media (min-width 768px)
+    margin 30px auto
+    width 600px
+
+  .modal--fade &
+    transform translate(0, -25%)
+    transition transform .3s ease-out
+
+  .modal--in &
+    opacity 1
+    transform none
+    transition transform .3s ease-out
+
+.modal__dialog--sm
+  width 300px
+
+.modal__dialog--lg
+  width 900px
+
+.modal__content
+  background-clip padding-box
+  background-color #fff
+  border 0
+  border-radius 3px
+  box-shadow 0 0 10px 0 rgba(0, 0, 0, .1)
+  outline 0
+  overflow hidden
+  position relative
+
+  @media (min-width 768px)
+    box-shadow 0 5px 15px rgba(0, 0, 0, .5)
+
+.modal__backdrop
+  background rgba(244, 241, 241, .95)
+  bottom 0
+  left 0
+  opacity 1
+  position fixed
+  right 0
+  top 0
+  z-index 0
+
+  .modal--fade &
+    opacity 0
+
+  .modal--in &
+    opacity .5
+
+  .modal--dark &
+    background rgba(black, .75)
+
+.modal__header
+  border-bottom 1px solid #e5e5e5
+  clearfix()
+  padding 15px 0
+  position relative
+
+.modal__close
+  background #dfe3e5
+  border 0
+  border-radius 100%
+  border-top 1px solid #c9d0d4
+  font-size 34px
+  font-weight normal
+  height 18px
+  margin-right 15px
+  margin-top -2px
+  opacity .8
+  padding 0
+  position absolute
+  right 0
+  top 15px
+  width 18px
+
+  &:hover
+    opacity 1
+
+  &:focus
+    outline 0
+
+.modal__x
+  color #fff
+  display block
+  font-size 18px
+  font-weight 500
+  line-height 18px
+  speak none
+  text-shadow 0 1px 0 #c9d0d4
+
+.modal__title
+  font-size 16px
+  font-weight 500
+  line-height 1
+  margin 0
+  text-align center
+
+.modal__body
+  border 0
+  max-height none
+  min-height 70px
+  overflow-y auto
+  padding 20px 35px
+  position relative
+
+.modal__footer
+  border-top 1px solid #e5e5e5
+  clearfix()
+  padding 15px
+  text-align center
+
+  :global(.btn)
+    font-size 11px
+
+  :global(.btn + .btn)
+    margin-bottom 0
+    margin-left 5px
+
+  :global(.btn-group .btn + .btn)
+    margin-left -1px
+
+  :global(.btn-block + .btn-block)
+    margin-left 0
+
+.modal :global(.alert button.close)
+  font-size 20px
+
+.modal__header :global(.nav-tabs)
+  margin-bottom 0
+  margin-top 20px
+
+.modal :global(.form-horizontal .control-label)
+  @media (min-width 768px)
+    margin-bottom 0
+    padding-top 7px
+    text-align right
