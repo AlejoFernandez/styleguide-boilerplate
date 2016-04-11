@@ -4,7 +4,7 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
-export default class WebFooter extends Component {
+class WebFooter extends Component {
   static propTypes = {
     dark: React.PropTypes.bool
   };

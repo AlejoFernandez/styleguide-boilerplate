@@ -4,10 +4,11 @@
   "description": "A collection of React components for using in your app",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.config.js --hot --inline --port 3000",
     "build": "NODE_ENV=production webpack --config webpack.standalone.config.js && webpack --config webpack.playground.config.js",
-    "lint-styl": "stylint src/components",
-    "lint-js": "eslint ."
+    "lint": "npm run lint:js && lint:styl",
+    "lint:js": "eslint .",
+    "lint:styl": "stylint src/components",
+    "start": "webpack-dev-server --config webpack.dev.config.js --hot --inline --port 3000"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
     "component-playground": "^1.2.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
+    "react-modal": "^0.6.1",
     "stylus": "^0.54.2"
   },
   "devDependencies": {
