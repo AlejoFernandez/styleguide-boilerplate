@@ -8,7 +8,7 @@ module.exports = {
   devtool: 'eval-source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
-    './landing/playground/index'
+    './landing/index'
   ],
   output: {
     path:          path.join(__dirname, 'build'),
