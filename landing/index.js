@@ -1,6 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Playground from 'component-playground';
+import styles from './index.styl';
+import classNames from 'classnames/bind';
+const cx = classNames.bind(styles);
+
+import Aside from './components/aside';
+
 import { Search, WebHeader, WebFooter, Modal } from '../src';
 
 export default function Index() {
@@ -8,9 +14,18 @@ export default function Index() {
   var webfooter = new WebFooter;
 
   return (
-    <div className="component-documentation">
+    <div>
 
-      <Playground codeText={webfooter.getExample()}  scope={{React: React, WebFooter: WebFooter}} />
+      <Aside />
+
+      <div className="content">
+
+        <div className="component-documentation">
+          <Playground codeText={webfooter.getExample()}  scope={{React: React, WebFooter: WebFooter}} />
+        </div>
+
+      </div>
+
     </div>
   );
 }
