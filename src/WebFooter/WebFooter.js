@@ -4,6 +4,8 @@ import classNames from 'classnames/bind';
 
 const cx = classNames.bind(styles);
 
+var componentExample = require("raw!./WebFooter.example");
+
 class WebFooter extends Component {
   static propTypes = {
     dark: React.PropTypes.bool
@@ -165,7 +167,7 @@ class WebFooter extends Component {
   }
 
   getExample(){
-    return ("<WebFooter />");
+    return componentExample;
   }
 }
 
