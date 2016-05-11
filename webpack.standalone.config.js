@@ -9,7 +9,7 @@ const DEBUG = process.env.NODE_ENV !== 'production';
 
 module.exports = {
   entry: [
-    './src/components/index'
+    './src/index'
   ],
   output: {
     path:          path.join(__dirname, 'build'),

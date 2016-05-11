@@ -1,3 +1,0 @@
-<Modal isOpen={false}>
-  <p>Hello, world</p>
-</Modal>

@@ -64,6 +64,11 @@ class Modal extends Component {
     this.handleFailModal = ::this.handleFailModal;
   }
 
+
+  getExample(){
+    return ("<ricky/>");
+  }
+
   componentWillUnmount() {
     document.body.classList.remove('ReactModal__Body--open');
   }
