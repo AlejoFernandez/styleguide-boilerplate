@@ -1,8 +1,6 @@
 # Auth0 - React Components
 
-The goal of this project is to have a version of [styleguide](https://github.com/auth0/styleguide) made in ReactJS to improve the development of web applications.
-
-![](https://cloud.githubusercontent.com/assets/302314/14407837/084ad552-feae-11e5-836d-5d70cc43ada3.png)
+A professional frontend styleguide made in ReactJS to improve the development of web applications.
 
 ## Contributing
 
@@ -10,11 +8,15 @@ If you want to contribute to this repo please make your work on `develop` and su
 
 ## Issue Reporting
 
-If you have found a bug or if you have a feature request, please report them at this repository [issues](https://github.com/auth0/auth0-react-components/issues) section.
+If you have found a bug or if you have a feature request, please report them at this repository [issues](https://github.com/rickyrauch/styleguide-boilerplate/issues) section.
 
 ## Author
 
-[Auth0](auth0.com)
+* [Alejo Fernandez]()
+* [Javier Centurion]()
+* [Ramiro Silveyra d'Avila]()
+* [Ricky Rauch](http://twitter.com/rickyrauch)
+
 
 ## License
 
