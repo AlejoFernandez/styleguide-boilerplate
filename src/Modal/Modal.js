@@ -77,9 +77,7 @@ class Modal extends Component {
   }
 
   getExample(){
-    return (`<Modal isOpen={false}>
-  <p>Hello, world</p>
-</Modal>`);
+    return ('<Modal />');
   }
 
   render() {

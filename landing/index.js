@@ -5,11 +5,12 @@ import { Search, WebHeader, WebFooter, Modal } from '../src';
 
 export default function Index() {
 
-  var modal = new Modal;
+  var webfooter = new WebFooter;
 
   return (
     <div className="component-documentation">
-      <Playground codeText={modal.getExample()} scope={{ React, Search }} />
+
+      <Playground codeText={webfooter.getExample()}  scope={{React: React, WebFooter: WebFooter}} />
     </div>
   );
 }

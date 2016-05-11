@@ -163,6 +163,10 @@ class WebFooter extends Component {
       </div>
     </footer>);
   }
+
+  getExample(){
+    return ("<WebFooter />");
+  }
 }
 
 export default WebFooter;
