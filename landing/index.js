@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Playground from 'component-playground';
-import styles from './index.styl';
-import classNames from 'classnames/bind';
-const cx = classNames.bind(styles);
-
 import Aside from './components/aside';
 
 import { Search, WebHeader, WebFooter, Modal } from '../src';
