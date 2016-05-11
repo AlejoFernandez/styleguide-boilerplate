@@ -1,5 +1,5 @@
 {
-  "name": "auth0-react-components",
+  "name": "styleguide-boilerplate",
   "version": "1.0.0",
   "description": "A collection of React components for using in your app",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "build": "NODE_ENV=production webpack --config webpack.standalone.config.js",
     "lint": "npm run lint:js && lint:styl",
     "lint:js": "eslint .",
-    "lint:styl": "stylint src/components",
+    "lint:styl": "stylint src",
     "start": "webpack-dev-server --config webpack.dev.config.js --hot --inline --port 3000"
   },
   "repository": {
