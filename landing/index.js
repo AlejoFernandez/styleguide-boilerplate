@@ -4,9 +4,12 @@ import Playground from 'component-playground';
 import { Search, WebHeader, WebFooter, Modal } from '../src';
 
 export default function Index() {
+
+  var modal = new Modal;
+
   return (
     <div className="component-documentation">
-      <Playground codeText="ssds" scope={{ React, Modal }} />
+      <Playground codeText={modal.getExample()} scope={{ React, Search }} />
     </div>
   );
 }

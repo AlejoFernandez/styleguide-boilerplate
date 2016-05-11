@@ -76,6 +76,12 @@ class Modal extends Component {
     this.props.onFail();
   }
 
+  getExample(){
+    return (`<Modal isOpen={false}>
+  <p>Hello, world</p>
+</Modal>`);
+  }
+
   render() {
     return (
       <ReactModal isOpen={this.props.isOpen} style={this.removeDefaultStyles}>
