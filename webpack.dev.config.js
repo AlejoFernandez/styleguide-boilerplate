@@ -3,13 +3,13 @@
 const path              = require('path');
 const webpack           = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const pkg     = require('./package.json');
 
 module.exports = {
   devtool: 'eval-source-map',
-  entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    './landing/index'
-  ],
+  entry: {
+    landing: './landing/index.js'
+  },
   output: {
     path:          path.join(__dirname, 'build'),
     filename:      'bundle.js',
@@ -19,10 +19,7 @@ module.exports = {
     loaders: [{
       test: /\.js$/,
       loaders: ['react-hot', 'babel'],
-      include: path.join(__dirname, 'src'),
-      query: {
-        presets: ['es2015']
-      }
+      exclude: /node_modules/,
     },
     {
       test: /\.styl$/,
