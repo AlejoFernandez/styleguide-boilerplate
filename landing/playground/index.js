@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Playground from 'component-playground';
-import { Search, WebHeader, WebFooter, Modal } from '../components';
+import { Search, WebHeader, WebFooter, Modal } from '../../components';
 import { searchExample, WebHeaderExample, WebFooterExample, ModalExample } from './examples';
 
 export default function Index() {

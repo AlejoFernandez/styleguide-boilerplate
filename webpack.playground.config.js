@@ -6,7 +6,7 @@ const pkg     = require('./package.json');
 
 module.exports = {
   entry: [
-    './src/playground/index'
+    './landing/playground/index'
   ],
   output: {
     path:          path.join(__dirname, 'build'),

@@ -8,7 +8,7 @@ module.exports = {
   devtool: 'eval-source-map',
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
-    './src/playground/index'
+    './landing/playground/index'
   ],
   output: {
     path:          path.join(__dirname, 'build'),
@@ -29,8 +29,8 @@ module.exports = {
   plugins: [
     new webpack.NoErrorsPlugin(),
     new HtmlWebpackPlugin({
-      title:    'Auth0 Components',
-      template: './templates/index.ejs',
+      title:    'Styleguide Boilerplate',
+      template: './landing/index.ejs',
       inject:   'body'
     })
   ]
